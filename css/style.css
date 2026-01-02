@@ -1,0 +1,553 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* GENERAL */
+body {
+  line-height: 1.6;
+  color: #222;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #000;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+#nav-menu a {
+  color: #fff;
+  font-size: 15px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 3px;
+}
+
+/* PAGE SECTIONS */
+.page,
+.products {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.products h2,
+.page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* PRODUCT / GALLERY GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.product-card h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* CONTACT FORM */
+form {
+  max-width: 500px;
+  margin: auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+form textarea {
+  height: 120px;
+}
+
+form button {
+  border: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 1.2s ease-in-out;
+}
+
+.zoom-in {
+  animation: zoomIn 0.8s ease-in-out;
+}
+
+/* KEYFRAMES */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+
+  #nav-menu a {
+    padding: 15px;
+    border-top: 1px solid #444;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+}
+
+
+/* SOCIAL MEDIA SECTION */
+.social-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.social-section h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+ 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-icons a {
+  font-size: 26px;              /* BIGGER ICON */
+  font-weight: 900;             /* BOLDER */
+  color: #fff;
+  background: #000;
+  width: 55px;                  /* BIGGER CIRCLE */
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  background: #333;
+}
+.phone-text {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+
+/* COLLECTION PAGE */
+.collection-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.collection-section h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.collection-category {
+  margin-bottom: 50px;
+}
+
+.collection-category h2 {
+  margin-bottom: 20px;
+  border-left: 4px solid #c59d5f;
+  padding-left: 10px;
+}
+
+/* GOWN GRID */
+.gown-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+
+.gown-card {
+  text-align: center;
+}
+.gown-card img {
+  height: 320px;
+}
+
+
+
+.gown-card p {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #222;
+}
+
+
+/* CLICK TO CALL */
+.call-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  color: #fff;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.call-btn i {
+  font-size: 18px;
+}
+
+.call-btn:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+/* FLOATING CALL ICON (RIGHT SIDE) */
+.floating-call {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 55px;
+  height: 55px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  z-index: 1000;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.floating-call:hover {
+  background: #333;
+  transform: scale(1.1);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar a i {
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  color: #c59d5f; /* fashion gold */
+}
+
+.navbar a.active {
+  color: #c59d5f;
+  border-bottom: 2px solid #c59d5f;
+}
+
+/* BLACK HEADER FOR ALL PAGES */
+.site-header {
+  background: #000;
+  padding: 15px 0;
+}
+
+.site-header .navbar {
+  background: transparent;
+}
+
+.site-header .navbar a {
+  color: #fff;
+}
+
+.site-header .navbar a:hover {
+  color: #c59d5f;
+}
+
+.site-header .navbar a i {
+  color: #fff;
+}
+
+/* ABOUT PAGE */
+.about-section,
+.location-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* MISSION & VISION */
+.mv-icon {
+  font-size: 35px;
+  color: #c59d5f; /* fashion gold */
+  margin-bottom: 15px;
+}
+
+.mv-section {
+  display: flex;
+  gap: 30px;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.mv-box {
+  flex: 1;
+  background: #f8f8f8;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.mv-box h2 {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.mv-box p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* LOCATION */
+.location-section h2 {
+  margin-bottom: 10px;
+}
+
+.location-section .address {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .mv-section {
+    flex-direction: column;
+  }
+}
+
+/* GOOGLE MAP */
+.map-container {
+  margin-top: 30px;
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+.gown-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.gown-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gown-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.gown-name {
+  font-weight: 600;
+  margin-top: 10px;
+  color: #111;
+}
+
+.gown-price {
+  color: #c59d5f;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* HORIZONTAL GOWN CARD */
+.horizontal-gown .gown-images {
+  display: flex;
+  gap: 8px;
+}
+
+.horizontal-gown .gown-images img {
+  width: 50%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .horizontal-gown .gown-images {
+    flex-direction: column;
+  }
+
+  .horizontal-gown .gown-images img {
+    width: 100%;
+    height: 180px;
+  }
+}
