@@ -629,6 +629,59 @@ footer {
   text-decoration: none;
   border-radius: 5px;
 }
+/* ===== HOMEPAGE COLLECTION GRID ===== */
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.collection-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.collection-box img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.collection-info {
+  padding: 15px;
+  flex-grow: 1;              /* THIS MAKES HEIGHT EQUAL */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.collection-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collection-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
 
 
 
