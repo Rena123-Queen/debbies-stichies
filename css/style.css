@@ -680,6 +680,38 @@ section h2 {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+.wedding-type {
+  margin-bottom: 50px;
+}
+
+.wedding-type h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.gown-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.gown-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.gown-card p {
+  text-align: center;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+
+
+
+
+
 
 
 
