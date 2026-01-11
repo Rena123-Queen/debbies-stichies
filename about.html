@@ -7,42 +7,62 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<a href="tel:+2348012345678" class="call-float">
+ <a href="tel:+2348038876859" class="call-float">
   <i class="fas fa-phone"></i>
 </a>
+<script>
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show");
+  }
+</script>
+  <script>
+  const navLinks = document.querySelectorAll(".nav a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage || 
+        (currentPage === "" && link.getAttribute("href") === "index.html")) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+
 <body>
-  <header class="site-header">
-  <nav class="navbar">
-    <a href="index.html">
-      <i class="fas fa-house"></i>
-      <span>Home</span>
-    </a>
+ <header class="site-header">
+  <div class="header-container">
 
-    <a href="collection.html">
-      <i class="fas fa-bag-shopping"></i>
-      <span>Collection</span>
-    </a>
+    <!-- Logo / Name -->
+    <div class="logo">
+      <a href="index.html">Debbies Stichies & Fashion Design</a>
+    </div>
 
-    <a href="about.html">
-      <i class="fas fa-user"></i>
-      <span>About</span>
-    </a>
+    <!-- Navigation -->
+    <nav class="nav" id="navMenu">
+  <a href="index.html">
+    <i class="fas fa-house"></i> Home
+  </a>
 
-    <a href="contact.html">
-      <i class="fas fa-phone"></i>
-      <span>Contact</span>
-    </a>
-  </nav>
-</header>
+  <a href="collection.html">
+    <i class="fas fa-shirt"></i> Collection
+  </a>
 
+  <a href="about.html">
+    <i class="fas fa-circle-info"></i> About
+  </a>
 
-<header class="navbar">
-  <div class="logo">Debbies Stichies & Fashion Design</div>
-<a href="contact.html">Contact Us</a>
-<a href="about.html">About</a>
-<a href="collection.html">Collection</a>
-  <a href="index.html">index</a>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <a href="contact.html">
+    <i class="fas fa-phone"></i> Contact
+  </a>
+</nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+  </div>
 </header>
 
 
@@ -110,6 +130,7 @@
 <script src="js/script.js"></script>
 </body>
 </html>
+
 
 
 
